@@ -1,0 +1,16 @@
+<div class="container" style="padding-top: 20px;">
+  <div class="row">
+    <div class="col-lg-9">
+      <input type="text" class="form-control form-control-lg" [(ngModel)]="url">
+    </div>
+    <div class="col-lg-3">
+      <button type="button" class="btn btn-primary btn-lg btn-block" style="background-color: #095a94;" [disabled] = "url == ''" (click)="shorter()" >{{ btnString }}</button>
+    </div>
+  </div>
+  <br>
+  <div class="row" *ngIf="btnString == 'Reset'">
+    <div class="col-lg-9">
+      <input type="text" class="form-control form-control-lg" [(ngModel)]="urlShort">
+    </div>
+  </div>
+</div>
